@@ -22,7 +22,6 @@ class ImagesContainer extends Component {
       } else {
         this.setState({ imageIndex: 0 }, () => this.changeImage())
       }
-
       this.setState({ imageToDisplay })
       console.log(this.state.imageIndex)
     }.bind(this), 3000)
