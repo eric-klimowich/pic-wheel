@@ -11,16 +11,16 @@ class ImagesContainer extends Component {
   }
 
   componentDidMount() {
-    this.renderImage()
+    this.changeImage()
   }
 
-  renderImage = () => {
+  changeImage = () => {
     setTimeout(function() {
       let imageToDisplay = this.state.images[this.state.imageIndex]
       if (this.state.imageIndex + 1 < this.state.images.length) {
-        this.setState({ imageIndex: this.state.imageIndex + 1}, () => this.renderImage())
+        this.setState({ imageIndex: this.state.imageIndex + 1}, () => this.changeImage())
       } else {
-        this.setState({ imageIndex: 0 }, () => this.renderImage())
+        this.setState({ imageIndex: 0 }, () => this.changeImage())
       }
 
       this.setState({ imageToDisplay })
